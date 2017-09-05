@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
+    <title>Super puper blog</title>
+</head>
+<body>
+<div class="container">
+<center><h1>My Blog</h1></center>
+<hr>
+<br><Br>
+{% for post in posts %}
+
+<div class="card">
+  <div class="card-block">
+    <h4 class="card-title">{{ post.title }}</h4>
+    <h6 class="card-subtitle mb-2 text-muted">Published at : {{ post.date }}</h6>
+    <p class="card-text">{{ post.text }}</p>
+    <a href="#" class="card-link">Read more...</a>
+
+  </div>
+</div><br><br>
+
+{% endfor %}
+
+</div>
+</body>
+</html>
