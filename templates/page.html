@@ -1,0 +1,32 @@
+{% extends 'base.html' %}
+
+{% block title %}
+    <title>{{ onepage.title }}</title>
+{% endblock %}
+
+{% block body %}
+
+<Br><h6>My Blog</h6><hr>
+<div class="card text-center">
+  <div class="card-header">
+
+  </div>
+  <div class="card-body">
+    <h4 class="card-title"> {{ onepage.title }}</h4>
+    <p class="card-text">
+        {% autoescape off %}
+        {{ onepage.body }}</p>
+       {% endautoescape %}
+<br>
+  </div>
+  <div class="card-footer text-muted">
+
+  </div>
+</div>
+
+
+    <br><br>
+
+
+
+{% endblock %}

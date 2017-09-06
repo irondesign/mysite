@@ -16,7 +16,12 @@ Including another URLconf
 from django.conf.urls import url
 from django.contrib import admin
 from Blog import views
+
+
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
     url(r'^$', views.index, name='index'),
+    url(r'^addnews/$', views.addnews, name='addnews'),
+    url(r'^pages/(?P<page_slug>[\w\-]+)/$', views.pages, name='pages'),
+    url(r'^posts/(?P<post_slug>[\w\-]+)/$', views.posts, name='posts'),
 ]

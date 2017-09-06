@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+{% block title %}
+    <title>{{ onepost.title }}</title>
+{% endblock %}
+
+
+{% block body %}
+{% if onepost %}
+
+
+<Br><h6>My Blog</h6><hr>
+    <div class="card text-center">
+  <div class="card-header">
+
+  </div>
+  <div class="card-body">
+    <h4 class="card-title"> {{ onepost.title }}</h4>
+    <p class="card-text">
+        {% autoescape off %}
+        {{ onepost.text }}</p>
+       {% endautoescape %}
+  </div>
+
+
+{% endif %}
+{% endblock %}

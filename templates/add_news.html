@@ -1,0 +1,11 @@
+{% extends 'base.html' %}
+
+{% block body %}
+    <h1>Add news</h1>
+    <hr>
+    <form method="post">
+    {% csrf_token %}
+    {{ form.as_ul }}
+    <button type="submit" value="submit">Добавить новость</button>
+    </form>
+{% endblock %}
